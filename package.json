@@ -1,0 +1,13 @@
+{
+  "name": "clutch.gg",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "nodemon": "^2.0.14"
+  }
+}
