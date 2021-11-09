@@ -1,6 +1,6 @@
 # Use the official lightweight Node.js 12 image.
 # https://hub.docker.com/_/node
-FROM node:16-slim
+FROM node:16-alpine
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
@@ -10,6 +10,7 @@ WORKDIR /usr/src/app
 # Copying this separately prevents re-running npm install on every code change.
 COPY package*.json ./
 
+RUN npm install -g yarn
 # Install production dependencies.
 RUN yarn install
 
