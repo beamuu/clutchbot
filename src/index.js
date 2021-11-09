@@ -3,7 +3,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 const handler = require("./handler");
 
-
+require("dotenv").config();
 
 // Discord bot token
 const { discord } = require("../token.json");
@@ -21,4 +21,4 @@ client.on("messageCreate", (msg) => {
 
   });
 
-client.login(discord);
+client.login(process.env.DISCORD_TOKEN);
