@@ -6,7 +6,6 @@ const handler = require("./handler");
 require("dotenv").config();
 
 // Discord bot token
-const { discord } = require("../token.json");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
