@@ -14,7 +14,7 @@ client.on("messageCreate", (msg) => {
 
     console.log(`Message from ${msg.author.username}: ${msg.content}`);
 
-    handler(msg);
+    handler(client, msg);
 
   });
 
