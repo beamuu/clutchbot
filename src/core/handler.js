@@ -1,8 +1,7 @@
-const check = require("./prefix")
-const handleBackups = require('./backups')
+const check = require("../prefix");
+const handleBackups = require("./backups");
 function handler(client, msg) {
-
-  handleBackups(client, msg)
+  handleBackups(client, msg);
 
   const splitted = msg.content.split(" ");
 
@@ -12,13 +11,8 @@ function handler(client, msg) {
   const args = splitted.slice(1, splitted.length);
   try {
     const lib = require(`./commands/${command}`);
-    lib(msg, args)
-  } catch (error) {
-
-  }
-
+    lib(msg, args);
+  } catch (error) {}
 }
-
-
 
 module.exports = handler;
