@@ -1,4 +1,4 @@
-function check(target) {
-  return target === require("./config.json").prefix;
+import config from "../config.json" assert {type: "json"};
+export function check(target) {
+  return target === config.prefix;
 }
-module.exports = check;

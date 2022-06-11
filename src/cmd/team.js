@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const getRandomInt = require("../libraries/random");
 
-function team(msg, args) {
+export default function team(msg, args) {
   try {
     const teamNumber = parseInt(args[0]);
     const participants = args.slice(1, args.length).filter((player) => player !== "");
@@ -74,4 +74,3 @@ function team(msg, args) {
     msg.channel.send({ embeds: [errorEmbed] });
   }
 }
-module.exports = team;

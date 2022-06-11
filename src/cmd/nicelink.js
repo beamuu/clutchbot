@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 
-function nicelink(msg, args) {
+export default function nicelink(msg, args) {
   const embedMessage = new MessageEmbed();
   msg.delete();
   // console.log(msg.author)
@@ -9,4 +9,3 @@ function nicelink(msg, args) {
   msg.channel.send({ embeds: [embedMessage] });
 }
 
-module.exports = nicelink;

@@ -1,6 +1,6 @@
-const { MessageEmbed } = require("discord.js");
-const { getAvatarUrl, getGuildAvatar } = require("../utils/avatar");
-const { shortenMsg } = require("../utils/message");
+import { MessageEmbed } from "discord.js";
+import { getAvatarUrl, getGuildAvatar } from "../utils/avatar.js";
+import { shortenMsg } from "../utils/message.js";
 
 const backupChannel = [
   {
@@ -21,7 +21,7 @@ function useCodeFormat(msg) {
   return "`" + msg + "`";
 }
 
-module.exports = function (client, msg) {
+export function handleBackups(client, msg) {
   for (var i = 0; i < backupChannel.length; i++) {
     if (msg.channelId === backupChannel[i].src) {
       console.log(msg);
